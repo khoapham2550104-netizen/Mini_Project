@@ -107,10 +107,7 @@ class Game(TickTacToe):
     
     mark = ('X', 'O')
     def play(self):
-        
         game_mode = input("Choose your game mode : \n 1. Player vs Player \n 2. Player vs Computer \n 3. Exit")
-        
-        
         # TODO: Implement all of this
         if game_mode == 1:
             pass
@@ -132,8 +129,17 @@ class Game(TickTacToe):
             print('So P2 will be X')
             
             
-        while 
 
+        first_to_move = input("Choose the first one to take action \n 1. P1 \n 2. P2 \n 3. Random")
+        if first_to_move == 1:
+            first_to_move = self.symbol_number_encode[mark1]
+            
+        elif first_to_move == 2:
+            first_to_move = self.symbol_number_encode[mark2]
+            
+        else:
+            first_to_move = rd.choice([-1, 1])
+        
     
 
 
